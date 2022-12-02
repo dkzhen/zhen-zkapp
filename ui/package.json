@@ -13,7 +13,8 @@
     "build:watch": "postcss styles/globals.css -o styles/main.css --watch",
     "prod:build": "NODE_ENV=production yarn run build:css && yarn run build",
     "predeploy": "npm run build",
-    "deploy": "build:css && gh-pages -d deploy"
+    "export": "next export",
+    "deploy": "next build && next export && npm run build:css && touch out/.nojekyll  && git add -f out && git commit -m \"Deploy gh-pages\" && cd .. && git subtree push --prefix ui/out origin gh-pages"
   },
   "dependencies": {
     "@types/node": "18.11.10",
