@@ -175,7 +175,7 @@ export default function App() {
   }
 
   let setupText = state.hasBeenSetup
-    ? "SnarkyJS Ready"
+    ? "DKZhen - SnarkJS Ready........"
     : "Setting up SnarkyJS...";
   let setup = (
     <div>
